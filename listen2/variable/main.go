@@ -27,7 +27,10 @@ func main() {
 	fmt.Printf("a=%d ,b=%t, c=%s, d=%f\n", a, b, c, d)
 
 	/*
-		Zhen
+		整数 %d
+		布尔值 %t
+		字符串 %s
+		浮点数 %f
 	*/
 
 }
