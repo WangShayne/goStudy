@@ -32,12 +32,17 @@ func timeOut() {
 	}
 }
 
-func timeTotal(){
-
+func timeTotal() {
+	start := time.Now().UnixNano()
+	for i := 0; i < 10; i++ {
+		time.Sleep(time.Millisecond)
+	}
+	end := time.Now().UnixNano()
+	fmt.Println((end - start) / 1000)
 }
 
 func main() {
 	// getNow()
 	// timeOut()
-
+	timeTotal()
 }
