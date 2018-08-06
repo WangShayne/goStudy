@@ -32,7 +32,6 @@ func GenerateBall(tp int) []int {
 			for j := 0; j < len(redBalls); j++ {
 				if redBallList[n] == redBalls[j] {
 					in = true
-				} else {
 					break
 				}
 			}
