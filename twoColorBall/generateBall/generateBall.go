@@ -21,9 +21,25 @@ func GenerateBall(tp int) []int {
 	}
 	rand.Seed(time.Now().UnixNano())
 
-	for i := 0; i < 6; i++ {
+	for i := 0; i < 100; i++ {
 		n := rand.Intn(len(redBallList))
-		redBalls = append(redBalls, redBallList[n])
+		if len(redBalls) == 0 {
+			redBalls = append(redBalls, redBallList[n])
+		} else if len(redBalls) == 6 {
+			break
+		} else {
+			in := false
+			for j := 0; j < len(redBalls); j++ {
+				if redBallList[n] == redBalls[j] {
+					in = true
+				} else {
+					break
+				}
+			}
+			if !in {
+				redBalls = append(redBalls, redBallList[n])
+			}
+		}
 	}
 	x := rand.Intn(len(blueBallList))
 	blueBalls = append(blueBalls, blueBallList[x])
