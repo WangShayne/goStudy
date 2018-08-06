@@ -73,9 +73,7 @@ func main() {
 				}
 			} else {
 				switch user.Balls[i].RedWin {
-				case 1, 0:
-					user.Total += 0
-				case 2:
+				case 2, 1, 0:
 					user.Total += 0
 				case 3:
 					user.Total += 5
