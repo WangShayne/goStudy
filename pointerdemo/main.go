@@ -13,4 +13,5 @@ func main() {
 	fmt.Println(ptr)
 	fmt.Println(&ptr)
 	fmt.Println(*ptr)
+	fmt.Println(*ptr)
 }
